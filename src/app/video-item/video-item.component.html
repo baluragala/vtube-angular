@@ -1,0 +1,10 @@
+<li class="list-group-item" (click)="onVideoSelect(video)">
+<div class="video-list media">
+  <div class="media-left">
+    <img class="media-object" [src]="video?.snippet.thumbnails.default.url" />
+  </div>
+  <div class="media-body">
+    <div class="media-heading">{{video?.snippet.title}}</div>
+  </div>
+</div>
+</li>

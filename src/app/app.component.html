@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
-</h1>
+<h2 class="app-title">V Tube - Imitate Youtube, not near at all !!!, Its Ok</h2>
+<!--<app-search-bar></app-search-bar>-->
+<app-video-detail [title]="selectedVideoTitle" [description]="selectedVideoDescription" [videoUrl]="selectedVideoUrl"></app-video-detail>
+<div *ngFor="let video of videos" class="col-md-4 list-group">
+  <app-video-item [video]="video" (selectedVideoEvent)="onSelectedVideoEvent($event)"></app-video-item>
+</div>
