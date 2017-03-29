@@ -1,13 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { AlertModule } from 'ng2-bootstrap';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
-import { AppComponent } from './app.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
-import { VideoDetailComponent } from './video-detail/video-detail.component';
-import { VideoItemComponent } from './video-item/video-item.component';
+import {AppComponent} from './app.component';
+import {SearchBarComponent} from './search-bar/search-bar.component';
+import {VideoDetailComponent} from './video-detail/video-detail.component';
+import {VideoItemComponent} from './video-item/video-item.component';
+import {YoutubeService} from './youtube.service'
 
 @NgModule({
   declarations: [
@@ -20,9 +20,10 @@ import { VideoItemComponent } from './video-item/video-item.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AlertModule.forRoot()
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [YoutubeService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

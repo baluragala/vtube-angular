@@ -1,6 +1,9 @@
 <div class="video-detail col-md-8">
+  <ng-template #loading><img class="loading" src="/assets/images/loading.gif"/></ng-template>
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" [src]="sanitizer.bypassSecurityTrustResourceUrl(videoUrl)"></iframe>
+    <div *ngIf="videoUrl!==undefined; else loading">
+      <iframe class="embed-responsive-item" [src]="sanitizer.bypassSecurityTrustResourceUrl(videoUrl)"></iframe>
+    </div>
   </div>
   <div class="details">
     <h4>{{title}}</h4>

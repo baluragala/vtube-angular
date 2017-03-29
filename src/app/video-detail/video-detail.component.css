@@ -4,3 +4,10 @@
   border: 1px solid #ddd;
   border-radius: 4px;
 }
+
+.loading{
+  display: block;
+  margin: auto;
+  padding-top: 150px;
+  width: 96px;
+}
